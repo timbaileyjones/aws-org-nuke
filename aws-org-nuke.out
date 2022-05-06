@@ -1,0 +1,240 @@
+setting up for deleting account=754071366098, tbj4-cf-base-backstage-prod
+{
+    "UserId": "AROA27ERH5HJK2VLLUNZC:tbj4-cf-base-backstage-prod",
+    "Account": "754071366098",
+    "Arn": "arn:aws:sts::754071366098:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-backstage-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 754071366098 and the alias 'tbj4-cf-base-backstage-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:09:59Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2VPC - vpc-0a2e1b1df234ee6e8 - [ID: "vpc-0a2e1b1df234ee6e8", IsDefault: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-0a923aca78d2bcfe5 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-0b45c41938eff0f82 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-06683cc27f0a5ccd6 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-07e397d63161a26a2 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-07c6ce363e635706a - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+us-east-1 - EC2Subnet - subnet-0a7eaca5792379483 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+time="2022-05-04T22:10:01Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGatewayAttachment - igw-085356aba6e29d3f8 -> vpc-0a2e1b1df234ee6e8 - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2DHCPOption - dopt-0822c77598c079341 - [DefaultVPC: "true"] - would remove
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+time="2022-05-04T22:10:03Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:03Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGateway - igw-085356aba6e29d3f8 - [DefaultVPC: "true", OwnerID: "754071366098"] - would remove
+time="2022-05-04T22:10:04Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+time="2022-05-04T22:10:04Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:05Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2RouteTable - rtb-00177b9f38c9c4c53 - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0871fa6420c12fa96 - [SecurityGroupId: "sg-04ad6d2fa9ab6c761"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-012bfb699c29b4d30 - [SecurityGroupId: "sg-04ad6d2fa9ab6c761"] - would remove
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
+setting up for deleting account=114759153895, tbj4-cf-base-gitlab-prod
+{
+    "UserId": "AROARVOBNXDT76BOJVUWL:tbj4-cf-base-gitlab-prod",
+    "Account": "114759153895",
+    "Arn": "arn:aws:sts::114759153895:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-gitlab-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 114759153895 and the alias 'tbj4-cf-base-gitlab-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:10:15Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:15Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGatewayAttachment - igw-0ccb0f7000e82f919 -> vpc-00c5f129242c9e8aa - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:16Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2RouteTable - rtb-0bae987e0168499ce - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0c043dd791f17ad7e - [SecurityGroupId: "sg-00b409bdfada05ab9"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0e8200e7e6c1c8993 - [SecurityGroupId: "sg-00b409bdfada05ab9"] - would remove
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+time="2022-05-04T22:10:17Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2VPC - vpc-00c5f129242c9e8aa - [ID: "vpc-00c5f129242c9e8aa", IsDefault: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-02f24ee25805a21aa - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-0fb6af60eaa575a6e - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-025202cd9414df39c - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-0a00cdb1b8ed7385f - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-0af3d07d2cd28a4c3 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2Subnet - subnet-0802a4c910fed69ba - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+us-east-1 - EC2InternetGateway - igw-0ccb0f7000e82f919 - [DefaultVPC: "true", OwnerID: "114759153895"] - would remove
+time="2022-05-04T22:10:19Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2DHCPOption - dopt-075a3d3683183d955 - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:19Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+time="2022-05-04T22:10:19Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
+setting up for deleting account=228784380896, tbj4-cf-base-logging-prod
+{
+    "UserId": "AROATKRE4TPQPOD7VCN57:tbj4-cf-base-logging-prod",
+    "Account": "228784380896",
+    "Arn": "arn:aws:sts::228784380896:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-logging-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 228784380896 and the alias 'tbj4-cf-base-logging-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:10:30Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2Subnet - subnet-0b76433b6a9491ada - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2Subnet - subnet-067ca6eb6b7731bc6 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2Subnet - subnet-0267d1d143248637b - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2Subnet - subnet-04be496ec5ebe64b3 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2Subnet - subnet-09038340ab4ffc40e - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2Subnet - subnet-06bcb81aaa793ca9b - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2InternetGateway - igw-0218462ceebd78629 - [DefaultVPC: "true", OwnerID: "228784380896"] - would remove
+time="2022-05-04T22:10:30Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0af8aa0b60069501d - [SecurityGroupId: "sg-05d640a25ebd3232b"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0d01478c98d2b6528 - [SecurityGroupId: "sg-05d640a25ebd3232b"] - would remove
+us-east-1 - EC2DHCPOption - dopt-016f44113fa1b96d5 - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:31Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2VPC - vpc-0b96389e0b0ad0dda - [ID: "vpc-0b96389e0b0ad0dda", IsDefault: "true", OwnerID: "228784380896"] - would remove
+us-east-1 - EC2InternetGatewayAttachment - igw-0218462ceebd78629 -> vpc-0b96389e0b0ad0dda - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:31Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:32Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+time="2022-05-04T22:10:33Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:33Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2RouteTable - rtb-0d6d87fed050bc93a - [DefaultVPC: "true"] - would remove
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
+setting up for deleting account=857001505318, tbj4-cf-base-mcs-prod
+{
+    "UserId": "AROA4PCKFGITM5PEM6Y24:tbj4-cf-base-mcs-prod",
+    "Account": "857001505318",
+    "Arn": "arn:aws:sts::857001505318:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-mcs-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 857001505318 and the alias 'tbj4-cf-base-mcs-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:10:42Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2VPC - vpc-08bae233e4ef83d36 - [ID: "vpc-08bae233e4ef83d36", IsDefault: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-0ab9c3164d778f48a - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-05681d1c063e9c2cd - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-0053c081bbbc92e76 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-09e0501b6301dcec1 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-04dc421f5297dc612 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2Subnet - subnet-0b982ae90c3fe4e3b - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+time="2022-05-04T22:10:43Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGateway - igw-0626b9ac8d64a27ed - [DefaultVPC: "true", OwnerID: "857001505318"] - would remove
+us-east-1 - EC2RouteTable - rtb-099e2ade09c7b40d8 - [DefaultVPC: "true"] - would remove
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+us-east-1 - EC2DHCPOption - dopt-0364698dc942faa3c - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:45Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:47Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:47Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGatewayAttachment - igw-0626b9ac8d64a27ed -> vpc-08bae233e4ef83d36 - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:10:47Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+time="2022-05-04T22:10:47Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-058d59a9f89e1dfe7 - [SecurityGroupId: "sg-089e429c3b4bf879a"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0ddcb69e2a5bccffa - [SecurityGroupId: "sg-089e429c3b4bf879a"] - would remove
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
+setting up for deleting account=236793438779, tbj4-cf-base-networking-prod
+{
+    "UserId": "AROATOIP5EI5XCSDAR2B4:tbj4-cf-base-networking-prod",
+    "Account": "236793438779",
+    "Arn": "arn:aws:sts::236793438779:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-networking-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 236793438779 and the alias 'tbj4-cf-base-networking-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:10:57Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:10:57Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2DHCPOption - dopt-05cf5eadf1c535c76 - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2VPC - vpc-0912feef918aded8d - [ID: "vpc-0912feef918aded8d", IsDefault: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2RouteTable - rtb-049bc9235b44d0e3b - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2Subnet - subnet-0384103211f3bfdef - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2Subnet - subnet-04392cc015ff6f5a2 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2Subnet - subnet-0213aa0f09811a8c5 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2Subnet - subnet-01ae681f9587b71f9 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2Subnet - subnet-06c2bd35427df9745 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2Subnet - subnet-05420ebfea609f15d - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+us-east-1 - EC2InternetGatewayAttachment - igw-009b8fe14c66dde93 -> vpc-0912feef918aded8d - [DefaultVPC: "true"] - would remove
+us-east-1 - EC2InternetGateway - igw-009b8fe14c66dde93 - [DefaultVPC: "true", OwnerID: "236793438779"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0dbcc9aa6b02d0239 - [SecurityGroupId: "sg-0bc242d658f6a214b"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-0e312d062a8d26bcf - [SecurityGroupId: "sg-0bc242d658f6a214b"] - would remove
+time="2022-05-04T22:11:00Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+time="2022-05-04T22:11:00Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:11:00Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:11:00Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:11:00Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
+setting up for deleting account=744953268680, tbj4-cf-base-ss-prod
+{
+    "UserId": "AROA224VMZHEHKTUQJOVP:tbj4-cf-base-ss-prod",
+    "Account": "744953268680",
+    "Arn": "arn:aws:sts::744953268680:assumed-role/OrganizationAccountAccessRole/tbj4-cf-base-ss-prod"
+}
+aws-nuke version unknown - unknown - unknown
+
+Do you really want to nuke the account with the ID 744953268680 and the alias 'tbj4-cf-base-ss-prod'?
+Waiting 3s before continuing.
+time="2022-05-04T22:11:09Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:11:09Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2InternetGateway - igw-0aaab6afa2e1145e3 - [DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2DHCPOption - dopt-0be46142c46c8a54d - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:11:11Z" level=warning msg="skipping request: DNS lookup failed for mobile.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2RouteTable - rtb-069d2d5160c87bc8e - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:11:12Z" level=warning msg="skipping request: DNS lookup failed for worklink.us-east-1.amazonaws.com; assuming it does not exist in this region"
+time="2022-05-04T22:11:13Z" level=warning msg="skipping request: DNS lookup failed for globalaccelerator.us-east-1.amazonaws.com; assuming it does not exist in this region"
+us-east-1 - EC2VPC - vpc-032fc4bed82d61030 - [ID: "vpc-032fc4bed82d61030", IsDefault: "true", OwnerID: "744953268680"] - would remove
+time="2022-05-04T22:11:13Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-00014ec0ea84d2eab - [SecurityGroupId: "sg-0e4e0be566bf3bddb"] - would remove
+us-east-1 - EC2DefaultSecurityGroupRule - sgr-00ce36521da73cb71 - [SecurityGroupId: "sg-0e4e0be566bf3bddb"] - would remove
+us-east-1 - EC2InternetGatewayAttachment - igw-0aaab6afa2e1145e3 -> vpc-032fc4bed82d61030 - [DefaultVPC: "true"] - would remove
+time="2022-05-04T22:11:14Z" level=info msg="TagOptionNotMigratedException: TagOption Migration not complete"
+us-east-1 - EC2Subnet - subnet-09bd8f8c648c4fe22 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2Subnet - subnet-05954afc4a78e416c - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2Subnet - subnet-00e80af86d3850741 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2Subnet - subnet-0ece4b2e2f46fe286 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2Subnet - subnet-007a48ad274a39790 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - EC2Subnet - subnet-0f95284d63b166302 - [DefaultForAz: "true", DefaultVPC: "true", OwnerID: "744953268680"] - would remove
+us-east-1 - Route53ResolverRule - rslvr-autodefined-rr-internet-resolver (Internet Resolver) - [ID: "rslvr-autodefined-rr-internet-resolver", Name: "Internet Resolver"] - Filtering DomainName "."
+global - IAMRole - OrganizationAccountAccessRole - [Name: "OrganizationAccountAccessRole", Path: "/"] - would remove
+global - IAMRolePolicyAttachment - AWSServiceRoleForOrganizations -> AWSOrganizationsServiceTrustPolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy", PolicyName: "AWSOrganizationsServiceTrustPolicy", RoleName: "AWSServiceRoleForOrganizations"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSSO -> AWSSSOServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy", PolicyName: "AWSSSOServiceRolePolicy", RoleName: "AWSServiceRoleForSSO"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForSupport -> AWSSupportServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy", PolicyName: "AWSSupportServiceRolePolicy", RoleName: "AWSServiceRoleForSupport"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - AWSServiceRoleForTrustedAdvisor -> AWSTrustedAdvisorServiceRolePolicy - [PolicyArn: "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy", PolicyName: "AWSTrustedAdvisorServiceRolePolicy", RoleName: "AWSServiceRoleForTrustedAdvisor"] - cannot detach from service roles
+global - IAMRolePolicyAttachment - OrganizationAccountAccessRole -> AdministratorAccess - [PolicyArn: "arn:aws:iam::aws:policy/AdministratorAccess", PolicyName: "AdministratorAccess", RoleName: "OrganizationAccountAccessRole"] - would remove
+Scan complete: 79 total, 15 nukeable, 64 filtered.
+
+The above resources would be deleted with the supplied configuration. Provide --no-dry-run to actually destroy resources.
