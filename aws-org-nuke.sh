@@ -12,7 +12,6 @@ do
   unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
 
   account_alias=$(echo "${account_alias}" | sed -e's/-prod/-deleted/g')
-  aws iam create-account-alias --account-alias "${account_alias}"
 
   #
   # assuming role for target account
@@ -35,6 +34,7 @@ do
   aws sts get-caller-identity
 
   set +e
+  aws iam create-account-alias --account-alias "${account_alias}"
   #echo subshell at $LINENO ; $SHELL
   #aws iam delete-account-alias --account-alias "${account_alias}"
   set -e
@@ -70,7 +70,7 @@ EOF
 #
     unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
     echo aws organizations close-account --account-id "${account}"
-    #set +e
-    #echo aws organizations close-account --account-id "${account}"
-    #set -e
+    set +e
+    echo aws organizations close-account --account-id "${account}"
+    set -e
 done ) | tee nuke-wrapper-${PREFIX_TO_NUKE}.`date +%Y%m%d%H%M%S`.out
