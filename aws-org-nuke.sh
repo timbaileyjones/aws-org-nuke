@@ -44,7 +44,17 @@ regions:
 - global
 
 account-blocklist:
-- "055073553869" # production
+- "055073553869" # dof/root
+- "903876013112" #cbm-cf-base-networking-prod
+- "218565165464" #cbm-cf-base-logging-prod
+- "981772098476" #cbm-cf-base-ss-prod
+- "121103356385" #cbm-cf-base-backstage-prod
+- "988575203198" #cbm-cf-base-security-prod
+- "776023817471" #cbm-cf-base-mcs-prod
+- "359731104774" #cbm-cf-base-sharedservices-prod
+- "511306004885" #cbm-cf-base-networking-prod
+- "289591525709" #cbm-cf-base-logging-prod
+- "135350223673" #cbm-cf-base-gitlab-prod
 
 accounts:
   "${account}":
@@ -57,7 +67,8 @@ resource-types:
   # don't nuke IAM users or roles
   excludes:
   - IAMUser
-  - IAMROle
+  - IAMRole
+  - IAMPolicy
   - IAMRolePolicyAttachment
 
 EOF
@@ -71,6 +82,6 @@ EOF
     unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
     echo aws organizations close-account --account-id "${account}"
     set +e
-    echo aws organizations close-account --account-id "${account}"
+    aws organizations close-account --account-id "${account}"
     set -e
 done ) | tee nuke-wrapper-${PREFIX_TO_NUKE}.`date +%Y%m%d%H%M%S`.out
