@@ -4,3 +4,7 @@
 /dist
 /releases
 /mocks
+*.out
+*.sw[op]
+other_scripts/\.*json
+.accounts.json
