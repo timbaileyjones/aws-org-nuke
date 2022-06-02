@@ -1,7 +1,8 @@
 #!/bin/bash -eux
+export PAGER=cat
 bucket_prefix=${1}
 
-buckets=$(aws s3api list-buckets | jq -r .Buckets[].Name | grep ${bucket_prefix})
+buckets=$(aws s3api list-buckets | jq -r .Buckets[].Name | grep "${bucket_prefix}-")
 #echo buckets=$buckets
 for bucket in ${buckets}
 do
