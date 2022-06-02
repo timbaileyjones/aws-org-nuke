@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEST_ORG_ID="ou-0gtj-9dcyha66"
 set -e
 set -u
 export PS4='Line ${LINENO}: '
@@ -6,16 +7,21 @@ export PS4='Line ${LINENO}: '
 PREFIX_TO_NUKE=${1:-nothing-at-all}
 ( aws organizations list-accounts > .accounts.json
 set +e
-cat .accounts.json | jq -r '.Accounts[] | "\(.Name) \(.Id)"' | grep "^${PREFIX_TO_NUKE}-" | sort | while read account_alias account
+cat .accounts.json | jq -r '.Accounts[] | "\(.Name) \(.Status) \(.Id)"' | grep "^${PREFIX_TO_NUKE}-" | sort | while read account_alias status account
 do
-  echo setting up for deleting account=$account, $account_alias
+  echo ; echo setting up for deleting account=$account, $account_alias
   unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
 
   account_alias=$(echo "${account_alias}" | sed -e's/-prod/-deleted/g')
 
-  #
-  # assuming role for target account
-  #
+  if [ $status != ACTIVE ]
+  then
+      echo Account $account is in $status status, continuing
+  else
+
+    #
+    # assuming role for target account
+    #
   role=arn:aws:iam::$account:role/OrganizationAccountAccessRole
   session_name="${account_alias}"
   temp_role=$(aws sts assume-role --role-arn "$role" --role-session-name "$session_name")
@@ -33,11 +39,10 @@ do
   export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
   aws sts get-caller-identity
 
-  set +e
-  aws iam create-account-alias --account-alias "${account_alias}"
-  #echo subshell at $LINENO ; $SHELL
-  #aws iam delete-account-alias --account-alias "${account_alias}"
-  set -e
+    set +e
+    aws iam create-account-alias --account-alias "${account_alias}"
+    #aws iam delete-account-alias --account-alias "${account_alias}"
+    set -e
 cat > aws-nuke-config.yaml << EOF
 regions:
 - ${AWS_REGION}
