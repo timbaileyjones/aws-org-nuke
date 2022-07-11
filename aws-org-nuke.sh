@@ -45,7 +45,10 @@ do
     set -e
 cat > aws-nuke-config.yaml << EOF
 regions:
-  - ${AWS_REGION}
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
   - global
 
 account-blocklist:
@@ -87,9 +90,9 @@ EOF
 
   fi
     unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
-    echo aws organizations close-account --account-id "${account}"
-    set +e
-    aws organizations close-account --account-id "${account}"
+    #echo aws organizations close-account --account-id "${account}"
+    #set +e
+    #aws organizations close-account --account-id "${account}"
 
     SOURCE_ORG_ID=$(aws organizations list-parents --child-id "${account}" | jq -r .Parents[0].Id)
     if [ $SOURCE_ORG_ID != $DEST_ORG_ID ]
